@@ -58,7 +58,7 @@ To run this project locally, follow the steps below.
     ```
 
 6. Open your browser and visit `http://127.0.0.1:8000/blog/` to view the blog page.
-![Screenshot (207)](https://github.com/user-attachments/assets/1b73484e-846a-40ac-b8c5-1da48f6f9afd)
+
 
 ## How It Works
 
