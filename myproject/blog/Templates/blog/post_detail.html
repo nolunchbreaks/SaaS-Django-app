@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}{{ post.title }} - BlogSaaS{% endblock %}
+
+{% block content %}
+    <div class="blog-post">
+        <img src="{{ post.image_url }}" alt="{{ post.title }}" class="post-image">
+        <h2 class="post-title">{{ post.title }}</h2>
+        <p class="post-description">{{ post.description }}</p>
+        <div class="post-meta">
+            <span class="post-category">{{ post.category }}</span>
+            <span class="post-date">{{ post.date }}</span>
+            <span class="post-author">{{ post.author }}</span>
+            <span class="post-comments">{{ post.comments_count }} comments</span>
+        </div>
+        <p>{{ post.full_content }}</p>
+    </div>
+{% endblock %}

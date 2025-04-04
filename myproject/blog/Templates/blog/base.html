@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}BlogSaaS{% endblock %}</title>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-title">
+                BlogSaaS
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="{% url 'blog_home' %}" class="nav-item {% if request.path == '/' %}active{% endif %}">
+                    <i class="fas fa-home"></i> Blog Home
+                </a>
+                <a href="{% url 'about' %}" class="nav-item {% if request.path == '/about/' %}active{% endif %}">
+                    <i class="fas fa-info-circle"></i> About BlogSaaS
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>BlogSaaS by Osagie Anolu</p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
